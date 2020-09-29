@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Phức tạp</title>
+    <style>
+        /* Nhóm */
+        h1,.tieuDe,h2{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* CSS lồng nhau – (Nesting)*/
+        #thucDon ul li a{
+            color: green;
+        }
+
+        #thucDon ul li a:hover{
+            color: brown;
+            font-size: 16px;
+        }
+
+        /* CSS cho form – (Styling form) */
+        input[type="text"]{
+            background-color: aqua;
+            color: blue;
+        }
+        input[type="button"]{
+            border: none;
+            background-color: green;
+            color: white;
+            padding:5px 10px;
+            cursor: pointer;
+        }
+
+        /* Lớp giả - (Pseudo-classes) */
+        a:hover{
+            color: brown;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sử dụng Nhóm-->
+    <h1>Sử dụng Nhóm</h1>
+    <h2>Sử dụng Nhóm</h2>
+    <div class="tieuDe">Sử dụng Nhóm</div>
+    <!-- Sử dụng Lồng -->
+    <div id="thucDon">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <a href="#">Trung Tâm Tin học</a>
+    <form>
+        <p>Nhập Họ tên:<input type="text"> </p>
+        <p><input type="button" value="Đăng nhập"></p>
+    </form>
+
+</body>
+</html>

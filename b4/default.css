@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: blue;
+}
+
+.tieuDe{
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+.inNghieng{
+    font-style: italic;
+}
+
+p.inDam{
+    font-weight: bold;
+}
+
+#header{
+    background-color: red;
+    width:1000;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+
+#footer{
+    
+    background-color: red;
+    width:1000;
+    margin: auto;
+    margin-top:5px;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}

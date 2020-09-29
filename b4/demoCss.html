@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo CSS</title>
+    <!--Internal Style -->
+    <style>
+        p{
+            color: green;
+            font-size:24px;
+        }
+    </style>
+    <!-- External Style -->
+    <link href="default.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Inline Style-->
+    <div
+        style="color:#FF0000; background-color:#CCCCCC; border-style:inset; width:450; text-align:center; padding:10,10, 10,10">
+        Chào mừng các bạn đến với bài học về "CSS và HTML"
+    </div>
+    <!--Sử dụng Internal Style -->
+    <p>Chào mừng các bạn đến với bài học về "CSS và HTML  - P "</p>
+    <p>Hello</p>
+    <!-- Sử dụng External Style -->
+    <h1>Chào cả nhà</h1>
+    <!-- Sử dụng Lớp (class)  -->
+    <h2 class="tieuDe inNghieng" >Sử dụng Lớp (class)</h2>
+    <div class="tieuDe inDam">Sử dụng Lớp (class)</div>
+    <p class="inDam">Hello P</p>
+    <header id="header">Sử dụng Định danh (id)</header>
+    
+    <div class="inDam inNghieng" id="footer">Sử dụng Định danh (id)</div>
+</body>
+
+</html>
