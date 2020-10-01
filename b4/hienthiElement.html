@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị Element</title>
+</head>
+<style>
+    #khung1 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        z-index: 1000;
+        visibility: visible;
+        
+        overflow: hidden;
+        
+    }
+
+    #khungCon {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top: 5px;
+        right: 0px;
+    }
+
+    #khung2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+
+        top: 60px;
+        left: 60px;
+
+    }
+</style>
+
+<body>
+    <div id="khung1">
+        <!-- <div id="khungCon">
+
+       </div> -->
+       overflow: visible | hidden | scroll | auto;
+       The values have the following effect:
+       ✦ visible—The content is not clipped, and is displayed outside of its bounding box, if necessary (as in Figure 23-10).
+       ✦ hidden—If the content is larger than its container, the content will be clipped. The clipped portion will not be visible, and the user will have no way to access it.
+       ✦ scroll—If the content is larger than its container, the user agent should contain the content within the container, but supply a mechanism for the user to access the rest of the content (usually through scroll bars). Figure 23-11 shows the same paragraph as in Figure 23-10, but with its overflow property set
+       to scroll.
+       ✦ auto—The handling of element contents is left up to the user agent. Overflows, if they happen, are handled by the user agent’s default overflow method.
+    </div>
+    <div id="khung2"></div>
+
+</body>
+
+</html>

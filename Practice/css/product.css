@@ -1,0 +1,84 @@
+body {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 960px;
+    height: auto;
+    border: 5px solid black;
+    border-radius: 16px;
+    background-color: gray;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.frame {
+    width: 240px;
+    height: 240px;
+    float: left
+}
+
+.frame-color-pink {
+    background-color: pink;
+}
+
+.frame-color-blue {
+    background-color: rgb(129, 194, 247);
+}
+
+.frame-color-yellow {
+    background-color: rgb(190, 205, 50);
+}
+
+.frame-color-orange {
+    background-color: rgb(247, 201, 118);
+}
+
+.big-title{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin: 65px 0 0 20px;
+}
+
+.big-title p {
+    margin: 0;
+}
+
+.paragraph-content {
+    width: 80%;
+    height: auto;
+    margin: 60px auto;
+}
+
+.small-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: aliceblue;
+}
+
+.text-content {
+    font-size: 14px;
+    text-align: left;
+    color: rgb(105, 60, 0);
+}
+
+.picture-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-content img {
+    height: auto;
+    width: 80%;
+    margin: 0;
+}

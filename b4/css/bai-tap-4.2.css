@@ -7,28 +7,49 @@ body {
     clear: both;
 }
 
-.chiTietSanPham {
-    width: 1000px;
-    margin: auto;
-    border: 1px solid green;
+.container {
+    width: 1140px;
+    margin: 20px auto 0 auto;
 }
 
 .leftSide {
-    width: 333px;
+    width: 40%;
     float: left;
-    border: 1px solid red;
 }
 
-.leftSide img {
+.rightSide {
+    float: left;
+    width: 60%;
+}
+
+.hinhTo {
+    width: auto;
+    height: auto;
+}
+
+.hinhNho {
+    width: auto;
+    height: 70px;
+    text-align: center;
+}
+
+.hinhTo img {
     width: 100%;
 }
 
-.smallImages {
-    width: 333px;
-    height: 50px;
-    float: inline-end;
+.hinhNho img {
+    width: auto;
+    height: 100%;
 }
 
-.smallImages img {
-    width: 100%;
+#tieuDe {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Gia {
+    font-size: 26px;
+    margin-left: 120px;
+    color: red;
 }
