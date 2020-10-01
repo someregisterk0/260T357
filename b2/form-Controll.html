@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Controll</title>
+</head>
+<body>
+    <form id="frmLogin">
+        <table>
+            <tr>
+                <td colspan="2">ĐĂNG NHẬP HỆ THỐNG</td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input type="text" name="tendangnhap" placeholder="Nhập tên đăng nhập (*)">
+                </td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td>
+                    <input type="password" name="matkhau" placeholder="Nhập mật khẩu (*)">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox">Lưu lại cho lần đăng nhập sau
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn Quyền</td>
+                <td>
+                    <select> <!--Combo box-->
+                        <option>Quản trị</option>
+                        <option>Nhân viên Bán hàng</option>
+                        <option>Nhân viên Giao hàng</option>
+                    </select>
+
+                    <select size="3" multiple> <!--List box: size="3" multiple: cho phép chọn nhiều -->
+                        <option>Quản trị</option>
+                        <option>Nhân viên Bán hàng</option>
+                        <option>Nhân viên Giao hàng</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Đăng nhập">
+                    <input type="button" value="Đăng ký">
+                </td>
+            </tr>
+            <tr>
+                <td>Góp ý</td>
+                <td>
+                    <textarea rows="5" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Nhấn chuột vào "Nam" hoặc "Nữ" để chọn giới tính<br>
+                        <input type="radio" name="phai" id="nam" checked />
+                        <label for="nam"> Nam</label><br />
+                        <input type="radio" name="phai" id="nu" />
+                        <label for="nu"> Nữ</label>
+                    
+                </td>
+            </tr>
+
+            
+        </table>
+
+
+
+    </form>
+</body>
+</html>
