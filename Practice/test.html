@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .khung {
+        border: #603 dotted;
+        padding: 0.5em;
+        margin: 1em 2em;
+    }
+
+    p.blocktext {
+        margin-left: auto;
+        margin-right: auto;
+        width: 16em
+            /* *** */
+    }
+
+    img.displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    div.container {
+        height: 20em;
+        display: table-cell;
+        vertical-align: middle;
+
+
+    }
+
+    .row {
+        display: table-row;
+
+    }
+
+    .cell {
+        display: table-cell;
+        border: solid 1px #DADADA;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+    <h1>CĂN GIỮA DÒNG VĂN BẢN</h1>
+    <!-- P { text-align: center }H2 { text-align: center } -->
+    <div class="khung">
+        <p style="text-align: center;">Tất cả các dòng trong đoạn này đều được căn giữa các lề của đoạn, nhờ giá trị
+            'center' của thuộc tính 'text-align' trong CSS.</p>
+    </div>
+    <h1>CĂN GIỮA MỘT KHỐI HAY HÌNH ẢNH</h1>
+    <!--P.blocktext {    margin-left: auto;    margin-right: auto;    width: 6em}-->
+    <div class="khung">
+        <p class="blocktext">
+            Khối văn bản tương đối hẹp này được căn giữa. Lưu ý rằng các dòng bên trong khối không được căn giữa (chúng
+            được căn trái), không như ví dụ trước.
+        </p>
+    </div>
+    <div class="khung">
+        Hình canh giửa
+        <img class="displayed" src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+
+    </div>
+    <h1>CĂN GIỮA THEO CHIỀU DỌC</h1>
+    <div class="khung">
+        <div class="container">
+            <img src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+        </div>
+    </div>
+    <div class="khung">
+        <div class="container">
+            <h4>
+                Đoạn nhỏ này được căn giữa theo chiều dọc.
+            </h4>
+        </div>
+
+    </div>
+    <div style="clear: both;"></div>
+    <hr>
+    
+    <div class="row">
+        <div class="cell" style="width:300px;height:300px">
+            <img src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+        </div>
+        <div class="cell" style="width:300px;height:300px">
+            <img src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+        </div>
+    </div>
+
+
+    <div style="border: 1px solid red; width:1000px; margin: auto;">
+        <div
+            style="text-align: center; border: 1px solid;display:table-cell;width: 300px; height:300px; vertical-align: middle;">
+            <img src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+        </div>
+        <div
+            style="text-align: center; border: 1px solid;display:table-cell;width: 300px; height:300px; vertical-align: middle;">
+            <img src="https://www.w3.org/Style/Woolly/woolly-mc.png">
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
