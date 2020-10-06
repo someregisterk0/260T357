@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media queries</title>
+    <style>
+        .container {
+            width: 1140px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 1140px) {
+            .container {
+                width: 1140px;
+                margin: auto;
+                background-color: red;
+                color: black;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .container {
+                width: 800px;
+                margin: auto;
+                background-color: green;
+                color: white;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 600px;
+                margin: auto;
+                background-color: yellow;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What is Lorem Ipsum?</h1>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+    </div>
+</body>
+</html>
