@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lay out</title>
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -27,6 +30,7 @@
 
         #all-head {
             height: 100px;
+            width: auto;
         }
 
         .logo {
@@ -50,6 +54,7 @@
 
         #middle {
             height: 600px;
+            width: auto;
         }
 
         .left {
@@ -76,6 +81,7 @@
         #all-foot {
             background-color: green;
             height: 100px;
+            width: auto;
         }
 
         @media screen and (max-width: 1024px) {
@@ -84,7 +90,7 @@
             }
 
             #middle {
-                height: 300px;
+                height: 600px;
             }
 
             .left {
@@ -104,8 +110,53 @@
             }
         }
 
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 600px;
+            }
+
+            #all-head {
+                height: 100px;
+                width: auto;
+            }
+
+            .logo {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+
+            .header {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+
+            #middle {
+                height: 600px;
+            }
+
+            .left {
+                width: 100%;
+                height: 20%;
+                float: none;
+            }
+
+            .content {
+                width: 100%;
+                height: 60%;
+                float: none;
+            }
+
+            .right {
+                width: 100%;
+                height: 20%;
+                float: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div id="all-head">
@@ -142,6 +193,7 @@
         <div id="all-foot">
             Footer
         </div>
+
     </div>
 
 </body>
