@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàm - JS</title>
+    <script src="js/thu_vien.js"></script>
+</head>
+<body>
+    <script>
+        /*
+        Khai báo: Hàm có thể được khai báo trong tag <head> hoặc tag <body> hoặc trong tập tin *.js 
+        */
+        /*
+            Cú pháp
+                   function <tên hàm>( [ tham số 1, tham số 2, … ] )
+                    {
+		                // khối lệnh xử lý 
+		                [ return <giá trị trả về >]
+                    }
+ 
+        */
+        // Ví dụ: Xây dựng hàm tính tổng hai số
+        function tonghaiso(a,b){
+            var tong=a+b;
+            return tong;
+        }
+
+        // Gọi hàm
+        var s1=10;
+        var s2=5;
+        var kq=tonghaiso(s1,s2);
+        document.write("Tổng hai số:" + kq +"<br>");
+        // Sử dụng Hàm: dtHinhvuong trong tập tin js/thu_vien.js
+        var canh=4
+        var dt=dtHinhvuong(canh);
+        document.write("Diện tích hình vuông: " + dt);
+
+    </script>
+</body>
+</html>

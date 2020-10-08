@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toán tử</title>
+</head>
+
+<body>
+    <script>
+        // Toán tử so sánh
+        var a = 10; // number
+        var b = "10"; // string
+        /*
+        var kq=(a==b);
+        document.write(kq); // true
+        */
+        /*
+        var kq = (a === b);
+        document.write(kq); // false -> Khác kiểu
+        */
+        
+        //Một số hàm cơ bản trong JavaScript
+        //eval(“chuỗi”): đánh giá biểu thức “chuỗi” và thi hành như là code JavaScript 
+        /*
+        str = "if (3>2) document.write('đúng'); else document.write('sai');"
+        var ktra = eval(str);			// “đúng”
+        document.write("<br>" + eval("2+2"));	// 4
+        */
+        //isNaN(<giá trị>): kiểm tra <giá trị> Nếu <giá trị> là chuỗi -> trả về true
+        /*
+            var kq=isNaN('js');
+            document.write(kq); // true
+        
+        
+            var kq=isNaN(50);
+            document.write("<br>" + kq); // false
+        */
+        
+        var s="10.5";
+        //s=Number(s); // chuỗi sang số 10.5
+        //s=parseInt(s)  // // chuỗi sang số nguyên 10
+        s=parseFloat(s)  // // chuỗi sang số thực 10.5
+
+        document.write("<br>" + typeof s + " Giá trị" + s);  
+        
+
+
+
+    </script>
+</body>
+
+</html>

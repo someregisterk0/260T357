@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng JavaScript trong trang HTML</title>
+    <!-- Chèn JavaScript vào head section -->
+    <script>
+        // code javaScript
+        // In thẻ h1 ra trang web
+        document.write('<h1>Chèn JavaScript vào head section</h1>')
+    </script>
+    <!-- Sử dụng tập tin thư viện – External script -->
+    <script src="js/libs.js"></script>
+</head>
+<body>
+    <!-- Chèn JavaScript vào sự kiện: onclick -->
+    <input type="button" value="Chèn JavaScript vào sự kiện" onclick="alert('Chèn JavaScript vào sự kiện')" >
+    <p onclick="alert('Chèn JavaScript vào sự kiện')" >Chèn JavaScript vào sự kiện</p>
+    <!-- Chèn JavaScript vào body section -->
+    <script>
+        document.write('<h1>Chèn JavaScript vào body section</h1>');
+    </script>
+    <!--Gọi hàm thongBao trong tập tin libs -->
+    <button onclick="thongBao('Gọi hàm thongBao trong tập tin libs')">Gọi hàm thongBao trong tập tin libs</button> 
+        
+</body>
+</html>
