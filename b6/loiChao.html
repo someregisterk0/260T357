@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Chào</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: red;
+        text-transform: uppercase;
+    }
+    table{
+        margin: auto;
+    }
+    .kq{
+        color: green;
+        font-weight: 900;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <h1>Lời chào</h1>
+    <table>
+        <tr>
+            <td>
+                Nhập Họ tên của Bạn
+            </td>
+            <td>
+                <input type="text" placeholder="Nhập họ tên" id="hoTen" >
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" value="Xuất Lời chào" onclick="tinhToan()">
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <div class="kq" id="kq">[Xuất]</div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function tinhToan(){
+            //alert('Xử lý Lời chào');
+            var hoTen=document.getElementById("hoTen"); // Nhập
+            //alert(hoTen);
+            // Lấy giá trị (value) => hoTen.value
+            var cauChao="Chào bạn, " + hoTen.value; // Tính toán
+            document.getElementById("kq").innerHTML=cauChao
+        }
+    </script>
+</body>
+</html>

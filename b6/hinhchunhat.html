@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+
+    <script>
+        function TinhChuViDienTich() {
+            var dai = document.getElementById("dai");
+            var rong = document.getElementById("rong");
+
+            // Kiểm tra input chiều dài
+            if(dai.value == "") {
+                alert("Chiều dài không được rỗng!");
+                dai.focus();
+                return false;
+            } else {
+                if(isNaN(dai.value)) {
+                    alert("Chiều dài chỉ được nhập số!");
+                    dai.select();
+                    return false;
+                }
+            }
+            // Kiểm tra input chiểu rộng
+            if(rong.value == "") {
+                alert("Chiều rộng không được rỗng!");
+                dai.focus();
+                return false;
+            } else {
+                if(isNaN(rong.value)) {
+                    alert("Chiều rộng chỉ được nhập số!");
+                    dai.select();
+                    return false;
+                }
+            }
+
+            dai = Number(dai);
+            rong = Number(rong);
+            var cv = (dai + rong) * 2;
+            var dt = dai * rong;
+
+            document.getElementById("chuVi").value = cv;
+            document.getElementById("dienTich").value = dt;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Tính Diện tích - Chu vi Hình Chữ Nhật</h1>
+    <table>
+        <tr>
+            <td>Nhập Chiều dài:</td>
+            <td><input type="text" placeholder="Nhập chiều dài" id="dai"></td>
+        </tr>
+        <tr>
+            <td>Nhập Chiều rộng:</td>
+            <td><input type="text" placeholder="Nhập chiều rộng" id="rong"></td>
+        </tr>
+        <tr>
+            <td>Diện tích:</td>
+            <td><input type="text" readonly id="dienTich"></td>
+        </tr>
+        <tr>
+            <td>Chu vi:</td>
+            <td><input type="text" readonly id="chuVi"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><input type="button" id="tinh" value="Tính Diện tích - Chu vi Hình Chữ Nhật" onclick="TinhChuViDienTich()"></td>
+        </tr>
+    </table>
+</body>
+</html>

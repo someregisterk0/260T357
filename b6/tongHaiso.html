@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Hai số</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        color: red;
+    }
+
+    table {
+        margin: auto;
+    }
+</style>
+
+<body>
+    <h1>Tính tổng Hai số</h1>
+    <table>
+        <tr>
+            <td>Nhập số hạng 1:</td>
+            <td><input type="text" id="so1" placeholder="Nhập số hạng 1"></td>
+        </tr>
+        <tr>
+            <td>Nhập số hạng 2:</td>
+            <td><input type="text" id="so2" placeholder="Nhập số hạng 2"></td>
+        </tr>
+        <tr>
+            <td>Tổng:</td>
+            <td><input type="text" id="kq" readonly></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><input type="button" id="tinh" value="Tính tổng" onclick="Tinh_tong()"></td>
+        </tr>
+    </table>
+    <script>
+        function Tinh_tong() {
+            var a = document.getElementById("so1");
+            var b = document.getElementById("so2");
+            // Kiểm tra dữ liệu hợp lệ
+            // Rỗng a
+            if(a.value==""){
+                alert('Nhập số hạng 1')
+                a.focus();
+                return false;
+            }
+            // Chuỗi a
+            if(isNaN(a.value)){
+                alert('Nhập số hạng 1 là Số')
+                a.select()
+                return false;
+            }
+
+            // Rỗng b
+            if(b.value==""){
+                alert('Nhập số hạng 2')
+                b.focus();
+                return false;
+            }
+            // Chuỗi b
+            if(isNaN(b.value)){
+                alert('Nhập số hạng 2 là Số')
+                b.select()
+                return false;
+            }
+
+            var kq = Number(a.value) + Number(b.value);
+            document.getElementById("kq").value = kq;
+        }
+    </script>
+</body>
+
+</html>
