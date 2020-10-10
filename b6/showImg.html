@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show Image</title>
+</head>
+<body>
+<img src="images/galaxy s8/1.jpg" id="imgBig">
+<div style="width:300px;">
+    <!--
+    <img src="images/galaxy s8/1.jpg" style="width: 20%;" onclick="changImg(this)">
+    <img src="images/galaxy s8/2.jpg" style="width: 20%;" onclick="changImg(this)">
+    <img src="images/galaxy s8/3.jpg" style="width: 20%;" onclick="changImg(this)">
+    -->
+    <img src="images/galaxy s8/1.jpg" style="width: 20%;" onmouseover ="changImg(this)">
+    <img src="images/galaxy s8/2.jpg" style="width: 20%;" onmouseover="changImg(this)">
+    <img src="images/galaxy s8/3.jpg" style="width: 20%;" onmouseover="changImg(this)">
+</div>
+<script>
+    function changImg(img){
+        document.getElementById("imgBig").src=img.src
+    }
+</script>    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Cửu Chương</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: red;
+    }
+    table{
+        margin: auto;
+    }
+</style>
+<body>
+    <h1>In Cửu Chương</h1>
+    <table>
+        <tr>
+            <td>Nhập số cửu chương:</td>
+            <td><input type="text" id="so" placeholder="Nhập số Cửu chương"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" id="tinh" value="Xuất Cửu Chương" onclick="tinhToan()" >
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="kq">[Xuất]</td>
+        </tr>
+    </table>
+    <script>
+        function tinhToan(){
+            var so=document.getElementById("so");
+            var str="";
+            // for
+            /*
+            for(i=1;i<=10;i++){
+                str+=so.value + " * " + i + " = " + (so.value*i)+"<br>";
+            }
+            */
+            // while
+            var i=1
+            while(i<=10){
+                str+=so.value + " * " + i + " = " + (so.value*i)+"<br>";
+                i=i+1;
+            }
+            document.getElementById("kq").innerHTML=str;
+        }
+    </script>
+</body>
+</html>

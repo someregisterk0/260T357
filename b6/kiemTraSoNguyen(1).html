@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số nguyên</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: red;
+    }
+    table{
+        margin: auto;
+    }
+</style>
+
+<body>
+    <h1>Kiểm tra số nguyên</h1>
+    <table>
+        <tr>
+            <td>Nhập số cần kiểm tra:</td>
+            <td><input type="text" id="so" placeholder="Nhập số cần kiểm tra"></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="kq">Kết quả:</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><input type="button" id="tinh" value="Kiểm tra" onclick="Tinh_toan()" ></td>
+        </tr>
+    </table>
+    <script>
+        function kiemTraSoNguyen(so){
+            return (Number(so)==parseInt(so));
+        }
+        function Tinh_toan(){
+            var so=document.getElementById("so");
+            
+            // Kiểm tra dữ liệu hợp lệ của so
+            if(so.value==""){
+                alert('Nhập số cần kiểm tra');
+                so.focus();
+                return false;
+            }
+            if(isNaN(so.value)){
+                alert('Nhập số cần kiểm tra là Số');
+                so.select();
+                return false;
+            }
+            if(!kiemTraSoNguyen(so.value)){
+                alert('Nhập số cần kiểm tra là Số Nguyên');
+                so.select();
+                return false;
+            }
+            
+            var kq=so.value + " Là Số nguyên";
+            document.getElementById("kq").innerHTML=kq;
+        }
+    </script>
+</body>
+</html>

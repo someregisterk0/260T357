@@ -4,29 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiểm tra số nguyên</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+
+    <script>
+        function KTSoNguyen() {
+            var input = document.getElementById("input");
+            
+            if(KTInput(input)) {
+                var n = input.value;
+                if(Number(n) == parseInt(n)) {
+                    alert(n + " là số nguyên");
+                    var kq = document.getElementById()
+                } else {
+                    alert(n + " không là số nguyên.");
+                }
+            }
+        }
+
+        function KTInput(input) {
+            if(input.value == "") {
+                alert("Dữ liệu nhập vào không được rỗng!");
+                input.focus();
+                return false;
+            } else if(isNaN(input.value)) {
+                alert("Dữ liệu nhập vào phải là số!");
+                input.select();
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
-<style>
-    h1{
-        text-align: center;
-        color: red;
-    }
-    table{
-        margin: auto;
-    }
-</style>
+
 
 <body>
     <h1>Kiểm tra số nguyên</h1>
     <table>
         <tr>
             <td>Nhập số cần kiểm tra:</td>
-            <td><input type="text" placeholder="Nhập số cần kiểm tra"></td>
+            <td><input type="text" placeholder="Nhập số cần kiểm tra" id="input"></td>
         </tr>
         <tr>
-            <td colspan="2" >Kết quả:</td>
+            <td colspan="2" id="kq">Kết quả:</td>
         </tr>
         <tr style="text-align: center;">
-            <td colspan="2"><input type="button" id="tinh" value="Kiểm tra"></td>
+            <td colspan="2"><input type="button" id="tinh" value="Kiểm tra" onclick="KTSoNguyen()"></td>
         </tr>
     </table>
 </body>

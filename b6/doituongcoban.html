@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đối tượng Cơ bản</title>
+</head>
+<body>
+    <h1>String -> Chuỗi ********  Date -> Ngày *** Math -> Hàm toán học</h1>
+    <div id="str"></div>
+    <script>
+        // Khai báo biến chuỗi
+        var chuoi = `Học lập trình javascript`;
+        var chuoi1 = `Trung Tâm Tin Học`;
+        var dodai=chuoi.length
+        document.getElementById("str").innerHTML=chuoi + " Độ dài: " + dodai ;
+        /*
+        var kytu=chuoi.charAt(0)
+        kytu=chuoi.charAt(dodai-1) // Lấy ký tự cuối -> t
+        console.log(kytu);
+        */
+        // Nối chuỗi
+        /*
+        var kq=chuoi.concat(" >> ",chuoi1);
+        console.log(kq);
+        */
+        // Tìm vị trí đầu
+        /*
+        var gtTim="t";
+        var vtDau=chuoi1.toLowerCase().indexOf(gtTim.toLowerCase());
+        console.log(vtDau); // 0
+        */
+        // Tìm vị trí cuối
+        /*
+        var gtTim="t";
+        var vtCuoi=chuoi1.toLowerCase().lastIndexOf(gtTim.toLowerCase());
+        console.log(vtCuoi); //10
+        */
+        // Thay thế
+        /*
+         var gtTim="t";
+         var gtThay="Z"
+         var str=chuoi1.toLowerCase().replace(gtTim.toLowerCase(),gtThay);
+         console.log(str);
+        */
+        // Tách chuỗi theo ký tự trả về là một mảng
+        /*
+        var array=chuoi1.split(" ");
+        console.log(array);
+        */
+        // substr(<vị trí cắt>,<độ dài>): trả về chuỗi con cắt được từ vị trí với độ dài tương ứng.
+        /*
+        var str=chuoi1.substr(0,5);
+        console.log(str); // Trung
+        var str1=chuoi1.substr(6)
+        console.log(str1); //Tâm Tin Học
+        */
+        /////////////// Date /////////////////////////////
+        /*
+            getDate(): trả về ngày theo dạng số từ 1->31
+            getDay(): trả về ngày trong tuần theo dạng số từ 0->6
+            getFullYear(): trả về năm đầy đủ 4 chữ số
+            getHours(): trả về số giờ của ngày
+            getMinutes(): trả về số phút của ngày
+            getMonth(): trả về số tháng từ 0->11
+            getSeconds(): trả về số giây của ngày
+
+        */
+        /*
+        var ngay=new Date(); // Ngày giờ Hiện hành
+        console.log(ngay);
+        */
+
+        //var n =new Date(2020,0,31); // 31-1-2020
+        
+        //var n =new Date(2020,7,4); // 4-8-2020
+        /*
+        console.log(n);
+        var ngay=n.getDate()
+        console.log(ngay);
+        var thu=n.getDay();
+        console.log(thu);
+        var thang=n.getMonth();
+        console.log(thang);
+        */
+        
+        /////////////// Math /////////////////////////////
+// Đối tượng Math quản lý các phương thức xử lý liên quan đến toán học.
+        /*
+        var songaunhien=Math.random();
+        console.log(songaunhien) // songaunhien>0 && songaunhien<1
+        */
+        //round(<số thập phân>): trả về số nguyên sau khi làm tròn
+        /*
+        var so=9.5;    
+        var so1=Math.round(so);
+        console.log(so1);
+        */
+        
+        //pow(<số>,<số mũ>): trả về kết quả lũy thừa theo số mũ
+        /*
+        var soluythua=3;
+        var so=2;
+        var kq= Math.pow(so,soluythua);
+        console.log(kq);
+        */
+        // sqrt(<số>): trả về số sau khi tính căn bậc hai.
+        /*
+        var so=4;
+        var kq=Math.sqrt(so);
+        console.log(kq);    
+        */
+        // max(<danh sách giá trị>): trả về giá trị lớn nhất trong danh sách.
+        // min(<danh sách giá trị>): trả về giá trị nhỏ nhất trong danh sách
+        /*
+        var soLN=Math.max(4,8,7);
+        var soNN=Math.min(4,7,8);
+        console.log("Max:" + soLN +" Min:" + soNN);
+        */        
+        
+
+    </script>
+</body>
+</html>

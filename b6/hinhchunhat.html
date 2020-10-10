@@ -44,10 +44,10 @@
                 }
             }
 
-            dai = Number(dai);
-            rong = Number(rong);
-            var cv = (dai + rong) * 2;
-            var dt = dai * rong;
+            var d = Number(dai.value);
+            var r = Number(rong.value);
+            var cv = (d + r) * 2;
+            var dt = d * r;
 
             document.getElementById("chuVi").value = cv;
             document.getElementById("dienTich").value = dt;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        color: red;
+    }
+    table{
+        margin: auto;
+    }
+</style>
+
+<body>
+    <h1>Tính Diện tích - Chu vi Hình Chữ Nhật</h1>
+    <table>
+        <tr>
+            <td>Nhập Chiều dài:</td>
+            <td><input type="text" id="d" placeholder="Nhập chiều dài"></td>
+        </tr>
+        <tr>
+            <td>Nhập Chiều rộng:</td>
+            <td><input type="text" id="r" placeholder="Nhập chiều rộng"></td>
+        </tr>
+        <tr>
+            <td>Diện tích:</td>
+            <td><input type="text" id="dt" readonly ></td>
+        </tr>
+        <tr>
+            <td>Chu vi:</td>
+            <td><input type="text" id="cv" readonly ></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2"><input type="button" id="tinh" value="Tính Diện tích - Chu vi Hình Chữ Nhật" onclick="Tinh_Dientich_Chuvi_HCN()" ></td>
+        </tr>
+    </table>
+    <script>
+        function Tinh_Dientich_Chuvi_HCN(){
+            var a=document.getElementById("d");
+            var b=document.getElementById("r");
+            
+            var dt=Number(a.value)*Number(b.value);
+            var cv=(Number(a.value)+Number(b.value))*2;
+            
+            document.getElementById("dt").value=dt;
+            document.getElementById("cv").value=cv;
+        }
+    </script>
+</body>
+</html>

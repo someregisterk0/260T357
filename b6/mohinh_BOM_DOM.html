@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô hình BOM - DOM</title>
+</head>
+<style>
+    .tieu_de{
+        color: red;
+    }
+</style>
+<body>
+
+    <div style="text-align: center;" id="container">
+        <h1>Mô hình BOM - DOM</h1>
+        <input type="button" value="Mô hình BOM" onclick="mohinhBOM()" />
+        <hr>
+        
+        <a href="javaScript:void(0)" onclick="return openWindow()">Open</a>
+        <a href="javaScript:void(0)" onclick="return moveWindow()">Move</a>
+        <a href="javaScript:void(0)" onclick="return resizeWindow()">Resize</a>
+        <a href="javaScript:void(0)" onclick="return closeWindow()">Close</a>
+        <input type="button" value="Mô hình DOM" onclick="mohinhDOM()" />
+    </div>
+
+    <img src="images/mua_hang.png" onmouseover="this.src='images/mua_tra_gop.png'" onmouseout="this.src='images/mua_hang.png'" />
+    
+</body>
+<script>
+    function mohinhDOM(){
+        var container=document.getElementById("container");
+        container.style.color="red";
+        
+        var link=document.getElementsByTagName("a");
+        alert(link.length)
+        for(var i=0;link.length;i++){
+            link.item(i).setAttribute("class","tieu_de");
+            alert(link.item(i).innerText)
+        }
+        
+    }
+    function mohinhBOM() {
+        // lấy chiều cao
+        var heightBrowser = window.innerHeight;
+
+        // lấy chiều rộng
+        var widthBrowser = window.innerWidth;
+        window.document.title=`Chiều Cao:${heightBrowser} - Rộng:${widthBrowser}`;
+    }
+
+    var windowChild = null;
+
+    function openWindow() {
+        windowChild = window.open('https://csc.edu.vn/', "windowChild", "width=500, height=500");
+        return false;
+    }
+    function moveWindow() {
+        windowChild = window.open('https://csc.edu.vn/', "windowChild", "width=500, height=500");
+        windowChild.moveTo(500, 300);
+        windowChild.focus();
+        return false;
+    }
+    function resizeWindow() {
+        windowChild = window.open('https://csc.edu.vn/', "windowChild", "width=500, height=500");
+        windowChild.resizeTo(1000, 1000);
+        windowChild.focus();
+        return false;
+    }
+
+    function closeWindow() {
+        windowChild.close()
+        return false;
+    }
+
+</script>
+
+</html>
