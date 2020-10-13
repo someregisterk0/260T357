@@ -70,15 +70,15 @@ function DangKyThanhVien()
 		document.getElementById("ketqua").innerHTML="Vui lòng nhập đầy đủ thông tin";
 	return kq;
 }
- function changeImage(srcImg) {
-	document.getElementById("imglarge").src = srcImg
+ function changeImage(key) {
+	document.getElementById("imglarge").src ="public/images/galaxy s8/"+ document.getElementById(key).name;
 }
  function changeColor(key) {
-	document.getElementById("imgSmall1").src = "images/galaxy s8/"+key + "_1.jpg";
-	document.getElementById("imgSmall2").src = "images/galaxy s8/"+key + "_2.jpg";
-	document.getElementById("imgSmall3").src = "images/galaxy s8/"+key + "_3.jpg";
-	document.getElementById("imgSmall4").src = "images/galaxy s8/"+key + "_4.jpg";
-	document.getElementById("imgSmall5").src = "images/galaxy s8/"+key + "_5.jpg";
+	document.getElementById("imgSmall1").src = "public/images/galaxy s8/"+key + "_1.jpg";
+	document.getElementById("imgSmall2").src = "public/images/galaxy s8/"+key + "_2.jpg";
+	document.getElementById("imgSmall3").src = "public/images/galaxy s8/"+key + "_3.jpg";
+	document.getElementById("imgSmall4").src = "public/images/galaxy s8/"+key + "_4.jpg";
+	document.getElementById("imgSmall5").src = "public/images/galaxy s8/"+key + "_5.jpg";
 	 
 	document.getElementById("imgSmall1").name = key + "_1.jpg";
 	document.getElementById("imgSmall2").name = key + "_2.jpg";
@@ -86,5 +86,5 @@ function DangKyThanhVien()
 	document.getElementById("imgSmall4").name = key + "_4.jpg";
 	document.getElementById("imgSmall5").name = key + "_5.jpg";
 	
-	document.getElementById("imglarge").src ="images/galaxy s8/"+ key + "_1.jpg";
+	document.getElementById("imglarge").src ="public/images/galaxy s8/"+ key + "_1.jpg";
 }

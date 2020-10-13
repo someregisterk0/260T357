@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Toán</title>
+
+    <script src="js/jquery-3.5.1.js">
+        $(document).ready(function(){
+            $("#plus").click(function(){
+                alert("cong");
+                var a = $("#so1").val();
+                var b = $("#so2").val();
+                $("#kq").html = a + b;
+            });
+        });
+    </script>
+
+    <style>
+        .container {
+            width: 1140px;
+            margin: auto;
+            background-color: bisque;
+        }
+
+        .title {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .btn {
+            margin: auto;
+            text-align: center;
+        }
+
+        .btn input {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">em làm toán</h1>
+
+        <table>
+            <tr>
+                <td>Nhập số hạng 1: </td>
+                <td><input type="text" id="so1"></td>
+            </tr>
+            <tr>
+                <td>Nhập số hạng 2: </td>
+                <td><input type="text" id="so2"></td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td id="kq">[kq]</td>
+            </tr>
+        </table>
+
+        <div class="btn">
+            <input type="submit" value="Cộng" id="plus">
+            <input type="submit" value="Trừ" id="minus">
+            <input type="submit" value="Nhân" id="multi">
+            <input type="submit" value="Chia" id="devide">
+        </div>
+    </div>
+</body>
+</html>

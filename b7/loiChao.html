@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Chào - jQuery</title>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <table>
+        <caption><h1>Lời chào (jQuery)</h1></caption>
+        <tr>
+            <td>Nhập Họ tên</td>
+            <td>
+                <input type="text" id="hoTen">
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="text" id="xuatKq">
+                <div id="xuatKq1"></div>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" id="tinhToan" value="Xuất Câu chào">
+            </td>
+        </tr>
+    </table>
+    <script>
+        $(function(){
+            $("#tinhToan").click(function(){
+                //alert('OK')
+                // Nhập Input
+                var hoTen=$("#hoTen").val(); // get
+                // Tính toán
+                var cauChao="Chào bạn, " + hoTen;
+                // Xuất Input
+                $("#xuatKq").val(cauChao); // set
+                // Xuất Div
+                $("#xuatKq1").html(cauChao).css({"color":"red"})
+
+            })
+        })
+    </script>
+</body>
+</html>

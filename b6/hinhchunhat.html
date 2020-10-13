@@ -1,83 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hình chữ nhật</title>
-    <style>
-        h1{
-            text-align: center;
-            color: red;
-        }
-        table{
-            margin: auto;
-        }
-    </style>
-
-    <script>
-        function TinhChuViDienTich() {
-            var dai = document.getElementById("dai");
-            var rong = document.getElementById("rong");
-
-            // Kiểm tra input chiều dài
-            if(dai.value == "") {
-                alert("Chiều dài không được rỗng!");
-                dai.focus();
-                return false;
-            } else {
-                if(isNaN(dai.value)) {
-                    alert("Chiều dài chỉ được nhập số!");
-                    dai.select();
-                    return false;
-                }
-            }
-            // Kiểm tra input chiểu rộng
-            if(rong.value == "") {
-                alert("Chiều rộng không được rỗng!");
-                dai.focus();
-                return false;
-            } else {
-                if(isNaN(rong.value)) {
-                    alert("Chiều rộng chỉ được nhập số!");
-                    dai.select();
-                    return false;
-                }
-            }
-
-            var d = Number(dai.value);
-            var r = Number(rong.value);
-            var cv = (d + r) * 2;
-            var dt = d * r;
-
-            document.getElementById("chuVi").value = cv;
-            document.getElementById("dienTich").value = dt;
-        }
-
-    </script>
 </head>
+<style>
+    h1 {
+        text-align: center;
+        color: red;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    span {
+        color: red;
+    }
+</style>
 
 <body>
     <h1>Tính Diện tích - Chu vi Hình Chữ Nhật</h1>
     <table>
         <tr>
             <td>Nhập Chiều dài:</td>
-            <td><input type="text" placeholder="Nhập chiều dài" id="dai"></td>
+            <td>
+                <input type="text" id="d" placeholder="Nhập chiều dài" class="kt">
+                <span id="tbD"></span>
+            </td>
         </tr>
         <tr>
             <td>Nhập Chiều rộng:</td>
-            <td><input type="text" placeholder="Nhập chiều rộng" id="rong"></td>
+            <td>
+                <input type="text" id="r" placeholder="Nhập chiều rộng" class="kt">
+                <span id="tbR"></span>
+            </td>
         </tr>
         <tr>
             <td>Diện tích:</td>
-            <td><input type="text" readonly id="dienTich"></td>
+            <td><input type="text" id="dt" readonly></td>
         </tr>
         <tr>
             <td>Chu vi:</td>
-            <td><input type="text" readonly id="chuVi"></td>
+            <td><input type="text" id="cv" readonly></td>
         </tr>
         <tr style="text-align: center;">
-            <td colspan="2"><input type="button" id="tinh" value="Tính Diện tích - Chu vi Hình Chữ Nhật" onclick="TinhChuViDienTich()"></td>
+            <td colspan="2"><input type="button" id="tinh" value="Tính Diện tích - Chu vi Hình Chữ Nhật"
+                    onclick="Tinh_Dientich_Chuvi_HCN()"></td>
         </tr>
     </table>
+    <script>
+        function Tinh_Dientich_Chuvi_HCN() {
+            
+            var a = document.getElementById("d");
+            var b = document.getElementById("r");
+            var tbD = document.getElementById("tbD");
+            var tbR = document.getElementById("tbR");
+            var Hop_le = true;
+            tbD.innerHTML = "";
+            tbR.innerHTML = "";
+            if (a.value == "") {
+                tbD.innerHTML = "(*)"
+                Hop_le = false;
+            }
+            if (b.value == "") {
+                tbR.innerHTML = "(*)"
+                Hop_le = false;
+            }
+            if (Hop_le == true) {
+                var dt = Number(a.value) * Number(b.value);
+                var cv = (Number(a.value) + Number(b.value)) * 2;
+
+                document.getElementById("dt").value = dt;
+                document.getElementById("cv").value = cv;
+            }
+            
+            /*
+            var kt =document.getElementsByClassName("kt")
+            document.querySelectorAll("span").forEach(lbl=>{
+                lbl.innerHTML=''
+            })
+            for(i=0;i<kt.length;i++){
+                //console.dir(kt.item(i))
+                if(kt.item(i).type=="text"){
+                    if(kt.item(i).value==""){
+                        kt.item(i).nextElementSibling.innerHTML="(*)"
+                    }
+                }
+            }
+            */
+
+
+        }
+    </script>
 </body>
+
 </html>

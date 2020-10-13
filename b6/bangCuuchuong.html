@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Cửu Chương</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        color: red;
+    }
+
+    table {
+        margin: auto;
+       
+    }
+
+    .khung {
+        float: left;
+        margin: 5px;
+        width: 150px;
+        border: 1px solid silver ;
+
+    }
+    
+    
+</style>
+<script>
+    function kiemTraSoNguyen(so) {
+        return (Number(so) == parseInt(so));
+    }
+
+    function dsCuuChuong(soBD, soKT) {
+        var html=""
+        for (j = soBD; j <= soKT; j++) {
+            html += "<div class='khung'>";
+            for (i = 1; i <= 10; i++) {
+                var tich = i * j;
+                html += j + " * " + i + " = " + tich + "<br>";
+            }
+            html += "</div>";
+        }
+        return html;
+    }
+    function Tinh_toan() {
+        var soBD = document.getElementById("soBD");
+        var soKT = document.getElementById("soKT");
+
+        // Kiểm tra dữ liệu hợp lệ của soBD
+        if (soBD.value == "") {
+            alert('Nhập số BD cần kiểm tra');
+            soBD.focus();
+            return false;
+        }
+        if (isNaN(soBD.value)) {
+            alert('Nhập số BD cần kiểm tra là Số');
+            soBD.select();
+            return false;
+        }
+
+
+        if (!kiemTraSoNguyen(soBD.value)) {
+            alert('Nhập số BD là Số Nguyên');
+            soBD.select();
+            return false;
+        }
+
+        // Kiểm tra dữ liệu hợp lệ của soKT
+        if (soKT.value == "") {
+            alert('Nhập số KT cần kiểm tra');
+            soKT.focus();
+            return false;
+        }
+        if (isNaN(soKT.value)) {
+            alert('Nhập số KT cần kiểm tra là Số');
+            soKT.select();
+            return false;
+        }
+
+
+        if (!kiemTraSoNguyen(soKT.value)) {
+            alert('Nhập số KT là Số Nguyên');
+            soKT.select();
+            return false;
+        }
+
+        if ((soBD.value > soKT.value) || (soKT.value < soBD.value)) {
+            alert('Dữ liệu Không hợp lệ');
+            soBD.select();
+            return false;
+        }
+
+        document.getElementById("kq").innerHTML=dsCuuChuong(soBD.value,soKT.value);
+
+
+    }
+</script>
+
+<body>
+    <h1>Bảng Cửu Chương</h1>
+    <table>
+        <tr>
+            <td>Nhập số Bắt đầu:</td>
+            <td><input type="text" id="soBD" placeholder="Nhập số Bắt đầu"></td>
+        </tr>
+        <tr>
+            <td>Nhập số Kết thúc:</td>
+            <td><input type="text" id="soKT" placeholder="Nhập số Kết thúc"></td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td colspan="2"><input type="button" id="tinh" value="In Bảng Cửu Chương" onclick="Tinh_toan()"></td>
+        </tr>
+    </table>
+    <div id="kq"></div>
+</body>
+
+</html>

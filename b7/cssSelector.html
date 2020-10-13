@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dạng CSS selector</title>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <!--
+    <p id="world">Đoạn 1</p>
+    <p>Đoạn 2</p>
+    <p class="khung">Đoạn 3</p>
+    <div id="mainContent">
+        <p>Đoạn 4</p>
+    </div>
+    <div class="title" >
+        <p>Đoạn 5</p>
+    </div>
+    <div id="menu">
+        <ol>
+            <li><a>Mục 1</a></li>
+            <li><a>Mục 2</a></li>
+            <li><a>Mục 3</a></li>
+        </ol>
+    </div>
+    <a>Trung Tâm Tin học</a>
+    -->
+    <p>Hello</p>
+    <div id="mydiv">
+        <p>Đoạn 1</p>
+        <p>Đoạn 2</p>
+        <div>
+            <p>Đoạn 3</p>
+        </div>
+    </div>
+    <p>Trung Tâm Tin học</p>
+    <p>HTML - CSS3 - JQUERY</p>
+    <script>
+        $(function(){
+            /*
+            $("p").css({"color":"red"}) // tất cả các tag <p>
+            //tất cả tag <p> nằm trong element có id là "mainContent"      
+            $("#mainContent p").css({"color":"green"})
+            //tất cả tag <p> nằm trong element có class là "title"          
+            $(".title p").css({"color":"blue"})
+            //$("p#world") : tag <p> có id là "world"
+            $("p#world").css({"font-size":"24px"})
+            //$("p.khung") : tag <p> có class là "khung"    
+            $("p.khung").css({"background-color":"aqua"})
+            // $(‘#menu ol li a’): tất cả các tag <a> đặt trong tag <li>, và <li> nằm trong element <ol> 
+            // và <ol> nằm trong <div>có id là "menu"
+            $("#menu ol li a").css({"color":"chocolate"})
+            */
+
+            $("#mydiv>p").css({"color":"red"})
+            $("#mydiv +p").css({"color":"green"})
+            $("#mydiv ~p").css({"font-size":"30px"})
+
+        })
+    </script>
+</body>
+</html>
