@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining</title>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    Click me!
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        $(document.body).click(function () {
+
+            if ($("div:first").is(":hidden")) {
+                $("div").show("slow")
+                    .css({ "background": "#8C0209", "color": "#ffffff"})
+                    .text("Tag div");
+
+            } else {
+                $("div").slideUp(1000);
+            }
+        });     
+    </script>
+</body>
+
+</html>

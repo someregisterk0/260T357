@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<title>Jquery sideshow đơn giản</title>
+	<script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+	<div class="slideshow1">
+		<img src="images/portfolio-1.jpg" width="500" height="260" title="1" />
+		<img src="images/portfolio-2.jpg" width="500" height="260" title="2" />
+		<img src="images/portfolio-3.jpg" width="500" height="260" title="3"/>
+		<img src="images/portfolio-4.jpg" width="500" height="260" title="4"/>
+		<img src="images/portfolio-5.jpg" width="500" height="260" title="5"/>
+	</div>
+
+	<script>
+		$(function () {
+
+			$('.slideshow1 img:gt(0)').hide();
+			
+			/*
+			setInterval(function () {
+				$('.slideshow1 :first-child').slideUp()
+					.next('img').slideDown(1000)
+					.end().appendTo('.slideshow1');
+			}, 5000);
+			*/
+			
+			
+
+			
+			$('.slideshow1 img:gt(0)').hide();
+			setInterval(function () {
+				$('.slideshow1 :first-child').fadeOut()
+					.next('img').fadeIn(1000)
+					.end().appendTo('.slideshow1');
+			}, 5000);
+			
+
+		})
+
+	</script>
+</body>
+
+</html>

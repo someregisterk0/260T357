@@ -1,73 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tính Toán</title>
-
-    <script src="js/jquery-3.5.1.js">
-        $(document).ready(function(){
-            $("#plus").click(function(){
-                alert("cong");
-                var a = $("#so1").val();
-                var b = $("#so2").val();
-                $("#kq").html = a + b;
-            });
-        });
-    </script>
-
-    <style>
-        .container {
-            width: 1140px;
-            margin: auto;
-            background-color: bisque;
-        }
-
-        .title {
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        table {
-            margin: auto;
-        }
-
-        .btn {
-            margin: auto;
-            text-align: center;
-        }
-
-        .btn input {
-            padding: 5px 10px;
-        }
-    </style>
+    <title>Em làm Toán  (jQuery)</title>
+    <script src="js/jquery-3.5.1.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="title">em làm toán</h1>
+    <table>
+        <caption>
+            <h1>Em làm Toán  (jQuery)</h1>
+        </caption>
+        <tr>
+            <td>Nhập số Hạng 1</td>
+            <td>
+                <input type="text" id="a">
+            </td>
+        </tr>
+        <tr>
+            <td>Nhập số Hạng 2</td>
+            <td>
+                <input type="text" id="b">
+            </td>
+        </tr>
+        <tr>
+            <td id="lbl">Kết quả</td>
+            <td>
+                <input type="text" id="kq" readonly>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <input type="button" id="cong" value="Tổng Hai số">
+                <input type="button" id="tru" value="Hiệu Hai số">
+                <input type="button" id="nhan" value="Tích Hai số">
+                <input type="button" id="chia" value="Thương Hai số">
+            </td>
 
-        <table>
-            <tr>
-                <td>Nhập số hạng 1: </td>
-                <td><input type="text" id="so1"></td>
-            </tr>
-            <tr>
-                <td>Nhập số hạng 2: </td>
-                <td><input type="text" id="so2"></td>
-            </tr>
-            <tr>
-                <td>Kết quả: </td>
-                <td id="kq">[kq]</td>
-            </tr>
-        </table>
+        </tr>
+    </table>
+    <script>
+        $(function(){
+            $("#cong").click(function(){
+                var a=$("#a").val()
+                var b=$("#b").val()
+                var tong=Number(a)+ Number(b);
+                $("#kq").val(tong);
+                $("#lbl").html('Tổng Hai số').css({"color":"red"}) 
+            })
 
-        <div class="btn">
-            <input type="submit" value="Cộng" id="plus">
-            <input type="submit" value="Trừ" id="minus">
-            <input type="submit" value="Nhân" id="multi">
-            <input type="submit" value="Chia" id="devide">
-        </div>
-    </div>
+            $("#tru").click(function(){
+                var a=$("#a").val()
+                var b=$("#b").val()
+                var tong=Number(a) - Number(b);
+                $("#kq").val(tong);
+                $("#lbl").html('Hiệu Hai số')  
+            })
+
+            $("#nhan").click(function(){
+                var a=$("#a").val()
+                var b=$("#b").val()
+                var tong=Number(a) * Number(b);
+                $("#kq").val(tong); 
+                $("#lbl").html('Tích Hai số')
+            })
+
+            $("#chia").click(function(){
+                var a=$("#a").val()
+                var b=$("#b").val()
+                var tong=Number(a) / Number(b);
+                $("#kq").val(tong);
+                $("#lbl").html('Thương Hai số')  
+            })
+        })
+    </script>
 </body>
+
 </html>

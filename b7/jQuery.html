@@ -1,75 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery</title>
-
-    <!-- JQuery cục bộ -->
+    <!-- Khai báo cục bộ -->
     <script src="js/jquery-3.5.1.js"></script>
-
-    <!-- JQuery từ server Google -->
+    <!-- Sử dụng phiên bản có sẵn trên server của google -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
-
 <body>
-    <h1>H1 - Lorem Ipsum</h1>
-
-    <div id="content">
-        Lorem Ipsum is simply dummy text.
-    </div>
-
-    <p class="title">
-        Lorem Ipsum has been the industry's standard.
-    </p>
-
+    <!-- javaScript -->
+    <!-- <a onclick="alert('Cám ơn Bạn đã theo dõi')">Nhấn </a> -->
+    <a>Nhấn</a>
     <script>
-        $(document).ready(function () {
-            // $("tên_tag")
-            $("h1").click(function () {
-                $("h1").css({
-                    "color": "red"
-                });
-            });
-
-            // $("#tên_id")
-            $("#content").click(function(){
-                $("#content").css({
-                    "color": "green",
-                    "font-size": "24px"
-                }).text("Lorem Ipsum is simply dummy text. - div có id=\"content\"");
-            });
-            
-            // $(".tên_class")
-            $(".title").click(function() {
-                $(".title").css({
-                    "color": "blue",
-                    "font-size": "36px"
-                }).text("Lorem Ipsum has been the industry's standard. - class=\"title\"");
-            });
-
-            // $("*")
-            $("*").css({
-                "color": "brown"
-            });
-
-            // $("selector 1, selector 2, selector 3")
-            $("h1, #content, .title").css({
-                "background-color": "aqua"
-            });
-        });
-
-
+        // Chạy mã lúc trang đã sẵn sàng (Document Ready)
+        // Cách 1
         /*
-        $(function() {
-            $("a").click(function() {
-                alert("Hello Jquery 2");
-            })
-        }); 
+        $(document).ready(function(){
+            // Lệnh Xử lý
+            alert('Hello 1')
+        })
         */
+
+        // Cách 2
+        
+        $(function(){
+            // Lệnh Xử lý
+            //alert('Hello 2')
+            $("a").click(function(){
+                alert('Cám ơn Bạn đã theo dõi - jQuery')
+            })
+        })
+        
     </script>
-
 </body>
-
 </html>

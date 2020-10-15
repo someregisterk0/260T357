@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!--
+    <!-- Ví dụ 1
     <p id="world">Đoạn 1</p>
     <p>Đoạn 2</p>
     <p class="khung">Đoạn 3</p>
@@ -27,6 +27,7 @@
     </div>
     <a>Trung Tâm Tin học</a>
     -->
+    <!-- Ví dụ 2 
     <p>Hello</p>
     <div id="mydiv">
         <p>Đoạn 1</p>
@@ -37,9 +38,20 @@
     </div>
     <p>Trung Tâm Tin học</p>
     <p>HTML - CSS3 - JQUERY</p>
+    -->
+    <!-- Ví dụ 3-->
+    <ol>
+        <li>Mục 1</li>
+        <li>Mục 2</li>
+        <li>Mục 3</li>
+        <li>Mục 4</li>
+        <li>Mục 5</li>
+    </ol>
+
     <script>
         $(function(){
             /*
+            // Ví dụ 1
             $("p").css({"color":"red"}) // tất cả các tag <p>
             //tất cả tag <p> nằm trong element có id là "mainContent"      
             $("#mainContent p").css({"color":"green"})
@@ -53,10 +65,19 @@
             // và <ol> nằm trong <div>có id là "menu"
             $("#menu ol li a").css({"color":"chocolate"})
             */
-
+            /*
+            // Ví dụ 2    
             $("#mydiv>p").css({"color":"red"})
             $("#mydiv +p").css({"color":"green"})
             $("#mydiv ~p").css({"font-size":"30px"})
+            */
+            // Ví dụ 3
+            /*
+            $("li:first").css({"color":"green"})
+            $("li:last").css({"color":"green"})
+            $("li:eq(2)").css({"color":"green"})  
+            */
+            $("li:even").css({"color":"green"})
 
         })
     </script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tham chiếu đối tượng trong jQuery</title>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1 style="background-color:aqua ;">Chào Mình là H1</h1>
+    <div id="content">Chào Mình là div</div>
+    <p class="title">Chào Mình là p</p>
+<script>
+    $(function(){
+        // Cú pháp chung
+
+        //$("tên_tag")
+        $("h1").click(function(){
+            // Lệnh xử lý
+            $("h1").css({"color":"red"})
+        })
+        //$("#tên_id")
+        $("#content").click(function(){
+            // Lệnh xử lý
+            $("#content").css({"color":"green","font-size":"24px"})
+            .text('Chào Mình là div - Có id="content"')
+        })
+        //$(".tên_lớp")
+        $(".title").click(function(){
+            // Lệnh xử lý
+            $(".title").css({"color":"blue","font-size":"34px"})
+            .text('Chào Mình là p - Có class="title"')
+        })
+        // $(“*”) -> Lấy tất cả
+        $("*").css({"color":"chocolate"})
+
+        // $("selector1, selector2, selectorN")
+        $("h1,#content,.title").css({"background-color":"aqua"})
+
+
+
+    })
+</script>    
+</body>
+</html>

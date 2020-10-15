@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Toán</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#plus").click(function(){
+                var a = $("#so1").val();
+                var b = $("#so2").val();
+                if(InputCheck(a, b)) {
+                    $("#kq").html(Number(a) + Number(b));
+                } else {
+                    return false;
+                }
+            });
+
+            $("#minus").click(function(){
+                var a = $("#so1").val();
+                var b = $("#so2").val();
+                if(InputCheck(a, b)) {
+                    $("#kq").html(Number(a) - Number(b));
+                } else {
+                    return false;
+                }
+            });
+
+            $("#multi").click(function(){
+                var a = $("#so1").val();
+                var b = $("#so2").val();
+                if(InputCheck(a, b)) {
+                    $("#kq").html(Number(a) * Number(b));
+                } else {
+                    return false;
+                }
+            });
+
+            $("#devide").click(function(){
+                var a = $("#so1").val();
+                var b = $("#so2").val();
+                if(InputCheck(a, b)) {
+                    if(b == "0") {
+                        $("#so2_ThongBao").html("<sup>(*)</sup> số chia phải khác 0").css({
+                            opacity: "1",
+                            color: "red"
+                        });
+                    } else {
+                        $("#so2_ThongBao").css({
+                            opacity: "0"
+                        });
+                        $("#kq").html(Number(a) / Number(b));
+                    }
+                } else {
+                    return false;
+                }
+            });
+
+            // kiểm tra input 
+            function InputCheck(a, b) {
+                var flag = true;
+
+                if(a == "") {
+                    $("#so1_ThongBao").html("<sup>(*)</sup> không được để trống.").css({
+                        opacity: "1",
+                        color: "red"
+                    });
+                    flag = false;
+                } else if(isNaN(a)) {
+                    $("#so1_ThongBao").html("<sup>(*)</sup> phải là số.").css({
+                        opacity: "1",
+                        color: "red"
+                    });
+                    flag = false;
+                } else {
+                    $("#so1_ThongBao").css({
+                        opacity: "0"
+                    });
+                }
+
+                if(b == "") {
+                    $("#so2_ThongBao").html("<sup>(*)</sup> không được để trống.").css({
+                        opacity: "1",
+                        color: "red"
+                    });
+                    flag = false;
+                } else if(isNaN(b)) {
+                    $("#so2_ThongBao").html("<sup>(*)</sup> phải là số.").css({
+                        opacity: "1",
+                        color: "red"
+                    });
+                    flag = false;
+                } else {
+                    $("#so2_ThongBao").css({
+                        opacity: "0"
+                    });
+                }
+
+                return flag;
+            }
+        });
+    </script>
+
+    <style>
+        .container {
+            width: 1140px;
+            margin: auto;
+            background-color: bisque;
+        }
+
+        .title {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .btn {
+            margin: auto;
+            text-align: center;
+        }
+
+        .btn input {
+            padding: 5px 10px;
+        }
+
+        #so1_ThongBao, #so2_ThongBao {
+            width: 170px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">em làm toán</h1>
+
+        <table>
+            <tr>
+                <td>Nhập số hạng 1: </td>
+                <td><input type="text" id="so1"></td>
+                <td id="so1_ThongBao"><sup>(*)</sup> không được để trống</td>
+            </tr>
+            <tr>
+                <td>Nhập số hạng 2: </td>
+                <td><input type="text" id="so2"></td>
+                <td id="so2_ThongBao"><sup>(*)</sup> không được để trống</td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td id="kq">[kq]</td>
+            </tr>
+        </table>
+
+        <div class="btn">
+            <input type="submit" value="Cộng" id="plus">
+            <input type="submit" value="Trừ" id="minus">
+            <input type="submit" value="Nhân" id="multi">
+            <input type="submit" value="Chia" id="devide">
+        </div>
+    </div>
+</body>
+</html>
