@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     body {
@@ -22,23 +22,28 @@
         margin-bottom: 0px;
         padding: 0.25rem 0.75rem;
     }
-    .card{
+
+    .card {
         width: 15rem;
         margin: 0.5rem
     }
-    label{
+
+    label {
         color: brown;
         font-weight: 800
     }
-    .nav a:hover{
+
+    .nav a:hover {
         text-decoration: underline !important;
         font-weight: bold !important;
     }
-    .iconBig{
-        font-size:20px;
+
+    .iconBig {
+        font-size: 20px;
         color: #17a2b8;
     }
 </style>
+
 <body>
 
     <!--header-->
@@ -51,7 +56,8 @@
                 <div class="col-12 col-md-10 col-xl-10 text-center">
                     <blockquote class="blockquote">
                         <h2 class="mb-0 text-info">Cửa Hàng Điện thoại PET</h2>
-                        <footer class="blockquote-footer"> <cite title="Source Title">Phục vụ Quí khách 24/7</cite></footer>
+                        <footer class="blockquote-footer"> <cite title="Source Title">Phục vụ Quí khách 24/7</cite>
+                        </footer>
                         <footer class="blockquote-footer"> <cite title="Source Title">
                                 <i class="fa fa-envelope-o" aria-hidden="true"></i> : pet@gmail.com -
                                 <i class="fa fa-phone" aria-hidden="true"></i> : 028 789789 </cite></footer>
@@ -60,17 +66,19 @@
             </div>
         </div>
     </div>
-    
+
     <!--Menu-->
     <div class="container">
         <div class="row bg-warning">
             <div class="col-12 col-md-12 col-xl-12 ">
                 <nav class="nav">
-                    <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
+                    <a class="nav-link" href="layoutSanphamDienthoaiCard.html"><i class="fa fa-home"
+                            aria-hidden="true"></i> Trang chủ</a>
                     <a class="nav-link" href="#"><i class="fa fa-android" aria-hidden="true"></i> Android</a>
                     <a class="nav-link" href="#"><i class="fa fa-apple" aria-hidden="true"></i> Iphone</a>
                     <a class="nav-link" href="#"><i class="fa fa-chain-broken" aria-hidden="true"></i> Giới thiệu</a>
-                    <a class="nav-link" href="#"><i class="fa fa-paperclip" aria-hidden="true"></i> Liên hệ</a>
+                    <a class="nav-link" href="layoutLienhe.html"><i class="fa fa-paperclip" aria-hidden="true"></i> Liên
+                        hệ</a>
                 </nav>
             </div>
         </div>
@@ -87,7 +95,19 @@
     <!--Content-->
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-4 col-xl-3 border">Left</div>
+            <div class="col-12 col-md-4 col-xl-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        Trang chủ
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Iphone
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Android
+                    </a>
+                </div>
+            </div>
             <div class="col-12 col-md-8 col-xl-9">
                 <nav aria-label="Page navigation">
                     <ul class="pagination pagination-sm justify-content-end mt-5">
@@ -116,7 +136,7 @@
                             <p class="card-text text-danger">Giá: 10.000.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 1', 'images/IPHONE_1.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -129,7 +149,7 @@
                             <p class="card-text text-danger">Giá: 12.000.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 2', 'images/IPHONE_2.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -142,7 +162,7 @@
                             <p class="card-text text-danger">Giá: 12.500.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 3', 'images/IPHONE_3.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -155,7 +175,7 @@
                             <p class="card-text text-danger">Giá: 13.800.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 4', 'images/IPHONE_4.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -168,7 +188,7 @@
                             <p class="card-text text-danger">Giá: 15.000.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 5', 'images/IPHONE_5.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -181,7 +201,7 @@
                             <p class="card-text text-danger">Giá: 28.000.000đ </p>
                             <div class="text-right">
                                 <i class="fa fa-info iconBig" aria-hidden="true"></i>
-                                <span class="badge badge-danger">Chi tiết</span>
+                                <span style="cursor: pointer;" class="badge badge-danger" onclick="showModal('Iphone 6', 'images/IPHONE_6.png')">Chi tiết</span>
                                 <i class="fa fa-shopping-cart iconBig" aria-hidden="true"></i>
                                 <span class="badge badge-danger">Mua hàng</span>
                             </div>
@@ -211,17 +231,42 @@
         </div>
     </div>
     <!--Banner-->
-    <div class="container" >
-            <div class="row text-primary">
-                <div class="col-12 col-md-6 col-xl-4 border">Banner 1</div>
-                <div class="col-12 col-md-6 col-xl-4 border">Banner 2</div>
-                <div class="col-12 col-md-12 col-xl-4 border">Banner 3</div>
-            </div>
+    <div class="container">
+        <div class="row text-primary">
+            <div class="col-12 col-md-6 col-xl-4 border">Banner 1</div>
+            <div class="col-12 col-md-6 col-xl-4 border">Banner 2</div>
+            <div class="col-12 col-md-12 col-xl-4 border">Banner 3</div>
         </div>
+    </div>
     <!--Footer-->
     <div class="container">
         <div class="row text-primary">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 border">Footer</div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-xl d-none" id="Th_show" data-toggle="modal" data-target="#modelId">
+        Launch
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Th_Title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-danger" id="Th_Noi_dung">
+                    <img id="Th_hinh" class="img-fluid">
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div> -->
+            </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
@@ -235,6 +280,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        function showModal(tieuDe, srcHinh) {
+            Th_Title.innerHTML = tieuDe
+            Th_hinh.src= srcHinh
+            Th_show.click();
+        }
+    </script>
 </body>
 
 </html>
